@@ -7,7 +7,9 @@ const ProductContext = React.createContext();
 
 
 class ProductProvider extends Component {
-    state = { 
+    state = {
+        // looping through products and setting state required
+        // not required for product details, so referencing is sufficient - state would not be changed
         products: [],
         detailProduct: detailProduct
     }
@@ -31,8 +33,8 @@ class ProductProvider extends Component {
         console.log('hello from detail');
     }
 
-    addToCart = () => { 
-        console.log('hello from addToCart');
+    addToCart = (id) => { 
+        console.log('cart.id');
     }
 
     render() {
