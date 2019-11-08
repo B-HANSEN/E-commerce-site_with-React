@@ -16,9 +16,10 @@ class ProductProvider extends Component {
         console.log('hello from detail');
     }
 
-    addToCart = () => {
+    addToCart = () => { 
         console.log('hello from addToCart');
     }
+
     render() {
         return (
            <ProductContext.Provider value={{ 
@@ -34,7 +35,6 @@ class ProductProvider extends Component {
         );
     }
 }
-
 
 const ProductConsumer = ProductContext.Consumer;
 
