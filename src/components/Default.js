@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
 
-export default class Default extends Component {
+export default class Default extends React.Component {
     render() {
-        return 
+        return null
     }
 }
