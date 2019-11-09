@@ -11,7 +11,8 @@ class ProductProvider extends Component {
         // looping through products and setting state required
         // not required for product details, so referencing is sufficient - state would not be changed
         products: [],
-        detailProduct: detailProduct
+        detailProduct: detailProduct,
+        cart: []
     }
 
     componentDidMount() {
@@ -35,15 +36,24 @@ class ProductProvider extends Component {
     }
 
     handleDetail =  id => {
-        const product = this.getItem
+        const product = this.getItem(id)
         this.setState( () => {
             return { detailProduct: product }
         })
     }
 
-    addToCart = (id) => { 
-        console.log('cart.id');
-    }
+    addToCart = id => { 
+        let tempProducts = [...this.state.products];
+        const index = tempProducts.indexOf(this.getItem(id));
+        const product = tempProducts[index];
+        product.inCart = true;
+        product.count = 1;
+        const price = product.price;
+        product.total = price;
+        this.setState(() => {
+            return { products: tempProducts, cart: [...this.state.cart, product] };
+        }, () => (console.log(this.state)));
+    };
 
     render() {
         return (
