@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+/save API in separate file that is not being committed:
+.env.development
+
 # testing
 /coverage
 
