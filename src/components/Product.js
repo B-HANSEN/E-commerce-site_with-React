@@ -34,7 +34,8 @@ export default class Product extends Component {
                                     }
                                     
                                 </button>
-                        </div>)
+                        </div>
+                        )
                     }
                    
                     </ProductConsumer>

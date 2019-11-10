@@ -21,21 +21,21 @@ export default function CartTotals({ value }) {
 
                             <h5>
                                 <span className="text-title">
-                                    subtotal :
+                                    subtotal:
                                 </span>
                                 <strong>$ { cartSubTotal }</strong>
                             </h5>
 
                             <h5>
                                 <span className="text-title">
-                                    tax :
+                                    tax:
                                 </span>
                                 <strong>$ { cartTax }</strong>
                             </h5>
 
                             <h5>
                                 <span className="text-title">
-                                    total :
+                                    total:
                                 </span>
                                 <strong>$ { cartTotal }</strong>
                             </h5>
